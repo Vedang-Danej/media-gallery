@@ -1,4 +1,5 @@
 import React from "react";
+
 const IFrameSkleton = (props) => {
   let landscapeVideos = props.videos
     .filter((video) => !video.potrait)
@@ -20,7 +21,6 @@ const IFrameSkleton = (props) => {
       <div className="potrait_9by16">
         <iframe
           width="100%"
-          height="100%"
           frameborder="0"
           src={videoObject.src}
           allow="fullscreen"

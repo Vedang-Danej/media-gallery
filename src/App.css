@@ -31,7 +31,7 @@
 .image_container {
   height: 500px;
 }
-img {
+.image_container img {
   max-width: 100%;
   height: auto;
 }
@@ -75,31 +75,23 @@ img {
 }
 .potrait_9by16 {
   position: relative;
+  padding-bottom: 177.777%;
   overflow: hidden;
-  width: 100%;
-  padding-top: 177.777%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  margin: 0 -109.7283%;
 }
-
 .potrait_9by16 iframe {
   position: absolute;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  left: 0;
+  height: 500px;
 }
-.potrait_9by16 iframe img {
-  width: 100%;
-  height: 100%;
-}
+
 .flex_container_9by16 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.6rem;
-}
-.embed-responsive-9by16 {
-  padding-top: 177.777%;
 }
 @media (max-width: 1280px) {
   .flex_container_16by9 {
