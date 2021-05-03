@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 const IFrameSkleton = (props) => {
+  const [wrapper, setwrapper] = useState(true);
+  const onClickWrapper = () => {
+    console.log("clicked");
+    setwrapper(false);
+  };
   let landscapeVideos = props.videos
     .filter((video) => !video.potrait)
     .map((videoObject) => (
@@ -18,13 +23,17 @@ const IFrameSkleton = (props) => {
   let potraitVideos = props.videos
     .filter((video) => video.potrait)
     .map((videoObject) => (
-      <div className="potrait_9by16">
-        <iframe
-          width="100%"
-          frameborder="0"
-          src={videoObject.src}
-          allow="fullscreen"
-        ></iframe>
+      <div className="x">
+        <div className={`x ${wrapper ? "neg" : null}`}>
+          <iframe
+            onClick={onClickWrapper}
+            width="100%"
+            height="100%"
+            frameborder="0"
+            src={videoObject.src}
+            allow="fullscreen"
+          ></iframe>
+        </div>
       </div>
     ));
 

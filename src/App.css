@@ -93,6 +93,21 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.6rem;
 }
+.x {
+  position: relative;
+  padding-bottom: 177.777%;
+  overflow: hidden;
+}
+.neg {
+  margin: 0 -109.7283%;
+}
+.x > iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 @media (max-width: 1280px) {
   .flex_container_16by9 {
     grid-template-columns: repeat(2, 1fr);
