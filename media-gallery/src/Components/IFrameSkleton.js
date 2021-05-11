@@ -34,7 +34,7 @@ const IFrameSkleton = (props) => {
         </div>
       </div>
     ));
-  if(true)console.log('test');
+
   return (
     <>
       <div className="flex_container_16by9">{landscapeVideos}</div>
