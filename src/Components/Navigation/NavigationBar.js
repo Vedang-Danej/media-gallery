@@ -15,6 +15,7 @@ const NavigationBar = () => {
   };
 
   const onCLickToggle = () => {
+    // eslint-disable-next-line
     const curToggle = toggle;
     setToggle(!toggle);
   };

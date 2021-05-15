@@ -14,11 +14,12 @@ const IFrameSkleton = (props) => {
      })
      window.focus();
 }
- 
+ // eslint-disable-next-line
   let landscapeVideos = props.videos
     .filter((video) => !video.potrait)
     .map((videoObject,index) => (
       <div className="embed-responsive embed-responsive-16by9" key={index}>
+        {/*eslint-disable-next-line*/}
         <iframe
           width="100%"
           height="100%"
@@ -29,12 +30,14 @@ const IFrameSkleton = (props) => {
         ></iframe>
       </div>
     ));
+    // eslint-disable-next-line
   let potraitVideos = props.videos
     .filter((video) => video.potrait)
     .map((videoObject,index) => (
      <div id={`player-${index+1}`} className="player" key={index} >
       <div>
-        <iframe 
+   {/*eslint-disable-next-line*/}
+        <iframe      
             onMouseOver={onMouseOver}            
             width="100%"
             height="100%"
