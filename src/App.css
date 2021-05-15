@@ -100,11 +100,15 @@
   overflow: hidden;
 }
 .neg {
-  position: relative;
   margin: 0 -109.7283%;
-  padding: 88.8888888% 0;
 }
-.neg > iframe {
+.y {
+  position: relative;
+
+  padding: 88.8888888% 0;
+  overflow: hidden;
+}
+.y > iframe {
   position: absolute;
   top: 0;
   right: 0;
@@ -127,6 +131,32 @@
     grid-gap: 0.6rem;
   }
 }
+
+.player,
+#player {
+  overflow: hidden;
+}
+.player > div,
+#player > div {
+  position: relative;
+  padding: 88.88888% 0;
+  overflow: hidden;
+}
+.player video,
+.player iframe,
+#player video,
+#player iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.player:not(.playing) > div,
+#player:not(.playing) > div {
+  margin: 0 -109.7283%;
+}
+
 @media (max-width: 500px) {
   .flex_container_16by9 {
     grid-template-columns: repeat(1, 1fr);
